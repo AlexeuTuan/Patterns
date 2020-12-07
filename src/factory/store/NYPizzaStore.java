@@ -1,6 +1,5 @@
 package factory.store;
 
-import factory.SimplePizzaFactory;
 import factory.pizzastyle.*;
 import factory.pizzastyle.nystyle.NYStyleCheesePizza;
 import factory.pizzastyle.nystyle.NYStyleClamPizza;
@@ -8,11 +7,6 @@ import factory.pizzastyle.nystyle.NYStylePepperoniPizza;
 import factory.pizzastyle.nystyle.NYStyleVeggiePizza;
 
 public class NYPizzaStore extends PizzaStore {
-
-    public NYPizzaStore(SimplePizzaFactory factory) {
-        super(factory);
-    }
-
     @Override
     public Pizza createPizza(String type) {
         if (type.equals("cheese")) {

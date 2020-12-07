@@ -9,7 +9,7 @@ import factory.pizzastyle.californiastyle.CaliforniaStyleVeggiePizza;
 public class SimplePizzaFactory {
     public Pizza createPizza(String type) {
         Pizza pizza = null;
-        if (type.equals("cheese")) {
+        if(type.equals("cheese")) {
             pizza = new CaliforniaStyleCheesePizza();
         } else if (type.equals("pepperoni")) {
             pizza = new CaliforniaStylePepperoniPizza();
