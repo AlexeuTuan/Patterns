@@ -1,14 +1,20 @@
-package factory;
+package factory.store;
 
-import factory.pizzastyle.*;
+import factory.pizzastyle.Pizza;
+import factory.SimplePizzaFactory;
 import factory.pizzastyle.californiastyle.CaliforniaStyleCheesePizza;
 import factory.pizzastyle.californiastyle.CaliforniaStyleClamPizza;
 import factory.pizzastyle.californiastyle.CaliforniaStylePepperoniPizza;
 import factory.pizzastyle.californiastyle.CaliforniaStyleVeggiePizza;
 
-public class SimplePizzaFactory {
+public class CaliforniaPizzaStore extends PizzaStore {
+
+    public CaliforniaPizzaStore(SimplePizzaFactory factory) {
+        super(factory);
+    }
+
+    @Override
     public Pizza createPizza(String type) {
-        Pizza pizza = null;
         if (type.equals("cheese")) {
             pizza = new CaliforniaStyleCheesePizza();
         } else if (type.equals("pepperoni")) {
