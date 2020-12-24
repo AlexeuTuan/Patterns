@@ -1,12 +1,22 @@
 package singleton;
 
 public class ChocolateBoiler {
+
+    private static ChocolateBoiler INSTANCE;
+
     private boolean empty;
     private boolean boiled;
 
-    public ChocolateBoiler() {
+    private ChocolateBoiler() {
         empty = true;
         boiled = false;
+    }
+
+    public static ChocolateBoiler getInstance() {
+        if(INSTANCE == null) {
+            INSTANCE = new ChocolateBoiler();
+        }
+        return INSTANCE;
     }
 
     public void fill() {
