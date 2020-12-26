@@ -3,6 +3,7 @@ package alekseytyan.command.additionalcommands;
 import alekseytyan.command.Command;
 
 public class MacroCommand implements Command {
+
     Command[] commands;
 
     public MacroCommand(Command[] commands) {
@@ -17,6 +18,8 @@ public class MacroCommand implements Command {
 
     @Override
     public void undo() {
-
+        for (int i = 0; i < commands.length; i++) {
+            commands[i].undo();
+        }
     }
 }
