@@ -1,4 +1,6 @@
-package alekseytyan.command;
+package alekseytyan.command.garage;
+
+import alekseytyan.command.light.Light;
 
 public class Garage {
 

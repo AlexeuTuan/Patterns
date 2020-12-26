@@ -1,4 +1,6 @@
-package alekseytyan.command;
+package alekseytyan.command.light;
+
+import alekseytyan.command.Command;
 
 public class LightOnCommand implements Command {
 
@@ -7,7 +9,13 @@ public class LightOnCommand implements Command {
     public LightOnCommand(Light light) {
         this.light = light;
     }
+
     public void execute() {
         light.on();
+    }
+
+    @Override
+    public void undo() {
+
     }
 }

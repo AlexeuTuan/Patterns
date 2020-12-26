@@ -1,23 +1,11 @@
 package alekseytyan;
 
-import alekseytyan.command.*;
+import alekseytyan.command.RemoteControl;
+import alekseytyan.command.light.Light;
+import alekseytyan.command.light.LightOnCommand;
 
 public class Main {
     public static void main(String[] args) {
 
-        SimpleRemoteControl remote = new SimpleRemoteControl(); // Remote
-
-
-        // Command 1
-        Light light = new Light();
-        LightOnCommand lightOn = new LightOnCommand(light);
-        remote.setSlot1(lightOn);
-        remote.buttonSlot1();
-
-        // Command 2
-        Garage garage = new Garage(light);
-        GarageDoorOpenCommand garageDoorOpen = new GarageDoorOpenCommand(garage);
-        remote.setSlot2(garageDoorOpen);
-        remote.buttonSlot2();
     }
 }

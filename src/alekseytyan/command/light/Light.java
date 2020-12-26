@@ -1,4 +1,4 @@
-package alekseytyan.command;
+package alekseytyan.command.light;
 
 public class Light {
     public void on() {

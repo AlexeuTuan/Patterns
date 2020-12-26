@@ -1,4 +1,6 @@
-package alekseytyan.command;
+package alekseytyan.command.garage;
+
+import alekseytyan.command.Command;
 
 public class GarageDoorOpenCommand implements Command {
 
@@ -11,5 +13,10 @@ public class GarageDoorOpenCommand implements Command {
     @Override
     public void execute() {
         garage.up();
+    }
+
+    @Override
+    public void undo() {
+
     }
 }
