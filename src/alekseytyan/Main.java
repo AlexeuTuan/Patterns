@@ -1,12 +1,28 @@
 package alekseytyan;
 
-import alekseytyan.command.RemoteControl;
-import alekseytyan.command.light.Light;
-import alekseytyan.command.light.LightOnCommand;
+import alekseytyan.adapter.Duck;
+import alekseytyan.adapter.MallardDuck;
+import alekseytyan.adapter.TurkeyAdapter;
+import alekseytyan.adapter.WildTurkey;
 
 public class Main {
     public static void main(String[] args) {
-        RemoteControl remoteControl = new RemoteControl();
-        Light livingRoomLight = new Light();
+        MallardDuck duck = new MallardDuck();
+        WildTurkey turkey = new WildTurkey();
+        Duck turkeyAdapter = new TurkeyAdapter(turkey);
+
+        System.out.println("“The Turkey says...”");
+        turkey.gobble();
+        turkey.fly();
+        System.out.println("“\nThe Duck says...”");
+        testDuck(duck);
+
+        System.out.println("“\nThe TurkeyAdapter says...”");
+        testDuck(turkeyAdapter);
+    }
+
+    static void testDuck(Duck duck) {
+        duck.quack();
+        duck.fly();
     }
 }
