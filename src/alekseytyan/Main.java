@@ -4,23 +4,24 @@ import alekseytyan.adapter.duckadapter.Duck;
 import alekseytyan.adapter.duckadapter.MallardDuck;
 import alekseytyan.adapter.duckadapter.Turkey;
 import alekseytyan.adapter.duckadapter.TurkeyAdapter;
+import alekseytyan.adapter.iteratoradapter.EnumerationAdapter;
+
+import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Duck duck1 = new MallardDuck();
+        List<String> testList = new ArrayList<>();
+        testList.add("string one");
+        testList.add("string two");
+        testList.add("string three");
+        testList.add("string four");
 
-        Turkey turkeyAdapter = new TurkeyAdapter(duck1);
-        testTurkey(turkeyAdapter);
+        Enumeration<String> enumeration = new EnumerationAdapter<>(testList.iterator());
 
-    }
-
-    static void testDuck(Duck duck) {
-        duck.quack();
-        duck.fly();
-    }
-
-    static void testTurkey(Turkey turkey) {
-        turkey.gobble();
-        turkey.fly();
+        while (enumeration.hasMoreElements()) {
+            System.out.println(enumeration.nextElement());
+        }
     }
 }
