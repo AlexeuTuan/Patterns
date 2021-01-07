@@ -1,4 +1,4 @@
-package alekseytyan.adapter;
+package alekseytyan.adapter.duckadapter;
 
 public interface Duck {
     void quack();

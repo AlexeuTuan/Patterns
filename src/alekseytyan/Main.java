@@ -1,7 +1,9 @@
 package alekseytyan;
 
-import alekseytyan.adapter.*;
-import com.sun.xml.internal.messaging.saaj.util.TeeInputStream;
+import alekseytyan.adapter.duckadapter.Duck;
+import alekseytyan.adapter.duckadapter.MallardDuck;
+import alekseytyan.adapter.duckadapter.Turkey;
+import alekseytyan.adapter.duckadapter.TurkeyAdapter;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,9 +1,10 @@
-package alekseytyan.adapter;
+package alekseytyan.adapter.duckadapter;
 
-public class DuckAdapter implements Turkey {
-    private Duck duck;
+public class TurkeyAdapter implements Turkey {
 
-    public DuckAdapter(Duck duck) {
+    Duck duck;
+
+    public TurkeyAdapter(Duck duck) {
         this.duck = duck;
     }
 

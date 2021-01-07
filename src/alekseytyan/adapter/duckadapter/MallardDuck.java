@@ -1,4 +1,4 @@
-package alekseytyan.adapter;
+package alekseytyan.adapter.duckadapter;
 
 public class MallardDuck implements Duck {
     public void quack() {

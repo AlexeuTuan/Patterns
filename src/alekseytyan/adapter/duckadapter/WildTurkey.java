@@ -1,4 +1,4 @@
-package alekseytyan.adapter;
+package alekseytyan.adapter.duckadapter;
 
 public class WildTurkey implements Turkey {
     public void gobble() {
